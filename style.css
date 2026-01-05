@@ -1,0 +1,219 @@
+/* --- COLORS --- */
+:root {
+    --p-purple: #7B61FF;
+    --p-pink: #FF4D80;
+    --p-teal: #4ECDC4;
+    --p-yellow: #FFD166;
+    --bg-dark: #12121A;
+}
+
+/* --- RESET --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* --- SCROLLBAR --- */
+html, body {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- BODY --- */
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- BACKGROUND --- */
+.particles-container {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+/* --- PARTICLES --- */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+/* --- LOGO JUKO --- */
+.hero-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 60px;
+}
+
+.logo-row {
+    display: flex;
+    font-size: clamp(80px, 15vw, 130px);
+    font-weight: 900;
+    letter-spacing: -6px;
+    line-height: 1;
+}
+
+/* --- LOGO COLORS --- */
+.l-j { color: var(--p-purple); }
+.l-u { color: var(--p-pink); }
+.l-k { color: var(--p-teal); }
+.l-o { color: var(--p-yellow); }
+
+/* --- LOGO TAG --- */
+.party-game-tag {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+/* --- CONTENT --- */
+.content-center {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px 120px;
+}
+
+/* --- VERSION TAG --- */
+.version-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--p-purple);
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+/* --- TITLE --- */
+h1 {
+    font-size: clamp(24px, 5vw, 38px); 
+    font-weight: 800;
+    margin-bottom: 60px; 
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    position: relative;
+    display: block;
+    text-align: center;
+    text-transform: none; 
+}
+
+/* --- TITLE UNDERLINE --- */
+h1::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--p-purple), var(--p-pink));
+    margin: 15px auto 0; 
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/* --- CGU SECTIONS --- */
+.cgu-sections section {
+    margin-bottom: 90px;
+}
+
+/* --- CGU SECTIONS H2 --- */
+.cgu-sections h2 {
+    color: var(--p-teal);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    font-weight: 900;
+    text-align: center; 
+}
+
+/* --- CGU SECTIONS H2 SPAN --- */
+.cgu-sections h2 span {
+    color: var(--p-pink);
+    margin-right: 12px;
+}
+
+/* --- CGU SECTIONS P --- */
+.cgu-sections p {
+    font-size: clamp(18px, 2.2vw, 21px);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* --- STORE BUTTONS --- */
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+/* --- STORE BUTTONS --- */
+.store-btn {
+    height: 52px;
+    transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* --- STORE BUTTONS IMG --- */
+.store-btn img { height: 100%; }
+
+/* --- STORE BUTTONS HOVER --- */
+.store-btn:hover { transform: scale(1.05); }
+
+/* --- FOOTER --- */
+.site-footer {
+    padding: 80px 20px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* --- FOOTER P --- */
+.site-footer p {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 0.3;
+}
+
+/* --- FOOTER SLOGAN --- */
+.slogan-footer {
+    margin-top: 12px;
+    color: var(--p-pink) !important;
+    opacity: 0.6 !important;
+}
+
+/* --- PROGRESS BAR --- */
+#progress-bar {
+    position: fixed; top: 0; left: 0; height: 2px;
+    background: linear-gradient(90deg, var(--p-purple), var(--p-pink));
+    z-index: 1000; width: 0%;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 600px) {
+    .content-center { padding: 0 25px 80px; }
+    .hero-logo { padding-top: 80px; }
+    .cgu-sections section { margin-bottom: 60px; }
+}
