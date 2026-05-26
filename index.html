@@ -4,7 +4,15 @@
         <!-- Meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JUKO | CGU</title>
+        <title>JUKO | Le Party Game entre potes</title>
+        <meta name="description" content="JUKO, le party game ultime pour animer tes soirées entre potes. Mini-jeux fun, multijoueur en local ou à distance. Disponible sur iOS et Android.">
+        <meta name="theme-color" content="#12121A">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="JUKO — Le Party Game entre potes">
+        <meta property="og:description" content="Réunis 2 à 8 potes, choisis ton mini-jeu, explose les barres de rire.">
+        <meta property="og:image" content="favicon.png">
+        <meta property="og:type" content="website">
 
         <!-- CSS -->
         <link rel="stylesheet" href="style.css">
@@ -13,13 +21,24 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     </head>
-    
+
     <body>
         <!-- Progress Bar -->
         <div id="progress-bar"></div>
 
         <!-- Particles -->
         <div class="particles-container" id="particles-bg"></div>
+
+        <!-- Top Nav -->
+        <nav class="top-nav">
+            <a href="index.html" class="nav-logo">JUKO</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="cgu.html">CGU</a>
+                <a href="privacy.html">Confidentialité</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
 
         <!-- Main Wrapper -->
         <div class="main-wrapper">
@@ -34,64 +53,102 @@
                 <p class="party-game-tag">PARTY GAME</p>
             </header>
 
-            <!-- Content Center -->
-            <main class="content-center">
-                <div class="version-tag">VERSION 1.0.1 • 2026</div>
-                <h1>Conditions Générales d'Utilisation</h1>
+            <!-- Hero Tagline -->
+            <section class="hero-tagline">
+                <div class="version-tag">VERSION 1.0 • 2026</div>
+                <h1 class="hero-headline">
+                    Le party game<br>
+                    <span class="gradient-text">entre potes</span>
+                </h1>
+                <p class="hero-sub">
+                    Réunis 2 à 8 amis en local ou à distance, choisis un mini-jeu et explose les barres de rire.
+                </p>
 
-                <!-- CGU Sections -->
-                <div class="cgu-sections">
-                    <section>
-                        <h2><span>01</span> PRÉAMBULE</h2>
-                        <p>Les présentes Conditions Générales d’Utilisation (CGU) régissent l'utilisation de l'application mobile <strong>JUKO</strong>, développée par <strong>Clément V.</strong> En installant et en utilisant l'Application, l'Utilisateur accepte sans réserve les présentes conditions.</p>
-                    </section>
-
-                    <section>
-                        <h2><span>02</span> ACCÈS ET INSCRIPTION</h2>
-                        <p>L'accès aux fonctionnalités multijoueurs nécessite une connexion via <strong>Google Sign-In</strong>. L'Utilisateur certifie être âgé d'au moins <strong>17 ans</strong>. L'Utilisateur est seul responsable de la confidentialité de ses identifiants Google et de l'utilisation de son compte.</p>
-                    </section>
-
-                    <section>
-                        <h2><span>03</span> COMPORTEMENT ET CONTENU</h2>
-                        <p>JUKO permet de générer du contenu (textes, dessins). Il est <strong>strictement interdit</strong> de diffuser du contenu illégal, haineux, discriminatoire, pornographique ou violent.</p>
-                        <p><strong>Modération :</strong> Clément V. applique une politique de "Tolérance Zéro". Nous nous réservons le droit de bannir immédiatement et sans préavis tout Utilisateur ne respectant pas ces règles.</p>
-                    </section>
-
-                    <section>
-                        <h2><span>04</span> PROPRIÉTÉ INTELLECTUELLE</h2>
-                        <p>Tous les éléments de l'Application (code, design, logo JUKO, animations) sont la propriété exclusive de Clément V. En créant du contenu sur l'app (ex: dessins de jeu), l'Utilisateur concède à l'éditeur un droit d'utilisation gratuit et mondial pour l'affichage de ce contenu au sein du jeu.</p>
-                    </section>
-
-                    <section>
-                        <h2><span>05</span> RESPONSABILITÉ</h2>
-                        <p>L'Application est fournie "telle quelle". Clément V. ne garantit pas l'absence de bugs, d'erreurs ou une disponibilité continue des serveurs. L'éditeur décline toute responsabilité en cas de dommages directs ou indirects liés à l'utilisation de l'application.</p>
-                    </section>
-
-                    <section>
-                        <h2><span>06</span> DONNÉES PERSONNELLES</h2>
-                        <p>Conformément au RGPD, nous respectons votre vie privée. Les données collectées (ID Google, Email, Pseudo, Avatar) servent uniquement au fonctionnement du jeu via les services <strong>Firebase</strong> (Google) et <strong>Render</strong>. Aucune donnée n'est revendue à des tiers.</p>
-                        <p>Pour exercer vos droits d'accès ou de suppression, contactez : <strong>juko.dev@gmail.com</strong>.</p>
-                    </section>
-
-                    <section>
-                        <h2><span>07</span> DROIT APPLICABLE</h2>
-                        <p>Les présentes CGU sont soumises au droit français. En cas de litige non résolu à l'amiable, les tribunaux compétents seront ceux du ressort de la ville de <strong>Marseille</strong>.</p>
-                    </section>
-                </div>
-
-                <!-- Store Buttons -->
-                <div class="store-buttons">
-                    <a href="#" class="store-btn">
+                <!-- Hero CTA Store Buttons -->
+                <div class="store-buttons hero-stores">
+                    <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
                     </a>
-                    <a href="#" class="store-btn">
+                    <a href="#" class="store-btn" aria-label="Disponible sur Google Play">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
                     </a>
                 </div>
+            </section>
+
+            <!-- Content Center -->
+            <main class="content-center">
+                <!-- 3 Feature Cards -->
+                <section class="features-grid">
+                    <article class="feature-card card-purple">
+                        <div class="feature-number">01</div>
+                        <div class="feature-icon">🎯</div>
+                        <h3>CRÉE TON SALON</h3>
+                        <p>Lance une partie en 3 secondes. Tes amis te rejoignent en scannant un QR Code sur place, ou en tapant ton code de salon à distance.</p>
+                    </article>
+
+                    <article class="feature-card card-pink">
+                        <div class="feature-number">02</div>
+                        <div class="feature-icon">🎲</div>
+                        <h3>CHOISIS TON MINI-JEU</h3>
+                        <p>Une collection de mini-jeux fun, créatifs, parfois absurdes. Chaque partie est différente, tu ne sais jamais sur quoi tu vas tomber.</p>
+                    </article>
+
+                    <article class="feature-card card-teal">
+                        <div class="feature-number">03</div>
+                        <div class="feature-icon">🚀</div>
+                        <h3>JOUE EN 30 SECONDES</h3>
+                        <p>Pas de tuto interminable. Parties rapides de 5 à 20 min, interface ultra simple. Ton apéro est sauvé.</p>
+                    </article>
+                </section>
+
+                <!-- Pitch Section -->
+                <section class="pitch-block">
+                    <h2 class="block-title">Pourquoi JUKO ?</h2>
+                    <ul class="pitch-list">
+                        <li><span class="bullet">→</span> Pas besoin de matériel, juste vos téléphones</li>
+                        <li><span class="bullet">→</span> 2 à 8 joueurs, local (Wi-Fi) ou à distance</li>
+                        <li><span class="bullet">→</span> Nouveaux mini-jeux ajoutés régulièrement</li>
+                        <li><span class="bullet">→</span> Gratuit, sans pub intrusive</li>
+                        <li><span class="bullet">→</span> Interface qui claque, design ultra fun</li>
+                    </ul>
+                </section>
+
+                <!-- Use Cases -->
+                <section class="pitch-block">
+                    <h2 class="block-title">Pour quoi ?</h2>
+                    <div class="usecases-grid">
+                        <span class="usecase-chip">Apéros entre amis</span>
+                        <span class="usecase-chip">Soirées étudiantes</span>
+                        <span class="usecase-chip">Vacances à plusieurs</span>
+                        <span class="usecase-chip">Pauses au taf</span>
+                        <span class="usecase-chip">Retours de soirée</span>
+                        <span class="usecase-chip">Diners de famille</span>
+                    </div>
+                </section>
+
+                <!-- Final CTA -->
+                <section class="final-cta">
+                    <h2 class="cta-title">Prêt à animer ta prochaine soirée ?</h2>
+                    <p class="cta-sub">Télécharge JUKO maintenant, c'est gratuit.</p>
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                        </a>
+                        <a href="#" class="store-btn" aria-label="Disponible sur Google Play">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                        </a>
+                    </div>
+                </section>
             </main>
 
             <!-- Footer -->
             <footer class="site-footer">
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="cgu.html">CGU</a>
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="contact.html">Contact</a>
+                </div>
                 <p>© 2026 JUKO STUDIO. TOUS DROITS RÉSERVÉS.</p>
                 <p class="slogan-footer">MOINS DE RÈGLES, PLUS DE RIRES.</p>
             </footer>
