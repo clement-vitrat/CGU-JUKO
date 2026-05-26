@@ -1,137 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <!-- Meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JUKO | Contact &amp; Support</title>
+        <title>JUKO — Contact &amp; Support</title>
         <meta name="description" content="Contact et support pour l'application JUKO. Besoin d'aide ? Un bug ? Une idée de mini-jeu ? Écris-nous.">
+        <meta name="theme-color" content="#FAFAFC">
 
-        <!-- CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="favicon.png">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <!-- Progress Bar -->
         <div id="progress-bar"></div>
-
-        <!-- Particles -->
         <div class="particles-container" id="particles-bg"></div>
 
-        <!-- Top Nav -->
-        <nav class="top-nav">
-            <a href="index.html" class="nav-logo">JUKO</a>
-            <div class="nav-links">
-                <a href="index.html">Accueil</a>
-                <a href="cgu.html">CGU</a>
-                <a href="privacy.html">Confidentialité</a>
-                <a href="contact.html" class="active">Contact</a>
+        <!-- FLOATING NAV -->
+        <nav class="floating-nav" id="topNav">
+            <div class="nav-pill">
+                <a href="index.html" class="nav-logo">JUKO</a>
+                <div class="nav-divider"></div>
+                <div class="nav-menu">
+                    <a href="index.html" data-i18n="nav.home">Accueil</a>
+                    <a href="cgu.html" data-i18n="nav.cgu">CGU</a>
+                    <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
+                    <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-tools">
+                    <button type="button" class="nav-btn theme-toggle" aria-label="Thème">
+                        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+                    </button>
+                    <button type="button" class="nav-btn lang-btn lang-toggle" aria-label="Langue">
+                        <span>FR</span>
+                    </button>
+                </div>
             </div>
+            <button type="button" class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
 
-        <!-- Main Wrapper -->
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" data-i18n="nav.home">Accueil</a>
+            <a href="cgu.html" data-i18n="nav.cgu">CGU</a>
+            <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
+            <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+            <div class="mm-divider"></div>
+            <div class="mm-tools">
+                <button type="button" class="nav-btn theme-toggle" aria-label="Thème">
+                    <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+                </button>
+                <button type="button" class="nav-btn lang-btn lang-toggle" aria-label="Langue">
+                    <span>FR</span>
+                </button>
+            </div>
+        </div>
+
         <div class="main-wrapper">
-            <!-- Hero Logo -->
-            <header class="hero-logo">
-                <div class="logo-row">
-                    <span class="l-j">J</span>
-                    <span class="l-u">U</span>
-                    <span class="l-k">K</span>
-                    <span class="l-o">O</span>
+            <!-- HERO -->
+            <header class="hero hero-full">
+                <div class="hero-logo">
+                    <div class="logo-row">
+                        <span class="l-j">J</span>
+                        <span class="l-u">U</span>
+                        <span class="l-k">K</span>
+                        <span class="l-o">O</span>
+                    </div>
+                    <p class="party-game-tag">PARTY GAME</p>
                 </div>
-                <p class="party-game-tag">PARTY GAME</p>
+
+                <div class="hero-text reveal">
+                    <span class="page-hero-tag" data-i18n="ct.tag">SUPPORT</span>
+                    <h1 class="hero-headline">
+                        <span class="gradient-text" data-i18n="ct.title">Une question ? Un bug ?</span>
+                    </h1>
+                    <p class="hero-sub" data-i18n="ct.sub">On répond vite. Sérieusement.</p>
+                </div>
             </header>
 
-            <!-- Content Center -->
             <main class="content-center">
-                <div class="version-tag">SUPPORT &amp; CONTACT</div>
-                <h1>Une question ? Un bug ?</h1>
-
-                <!-- Contact Methods -->
-                <section class="contact-grid">
-                    <a href="mailto:juko.dev@gmail.com?subject=Support%20JUKO" class="contact-card">
-                        <div class="contact-icon">✉️</div>
-                        <h3>E-MAIL</h3>
-                        <p class="contact-value">juko.dev@gmail.com</p>
-                        <p class="contact-hint">Réponse sous 48h</p>
+                <!-- 3 CONTACT CARDS (style features-grid) -->
+                <section class="features-grid">
+                    <a href="mailto:juko.party@gmail.com?subject=Support%20JUKO" class="feature-card card-purple reveal">
+                        <div class="feature-number">01</div>
+                        <h3 data-i18n="ct.c1.t">E-MAIL</h3>
+                        <p><strong data-i18n="ct.c1.v">juko.party@gmail.com</strong></p>
+                        <p class="contact-hint" data-i18n="ct.c1.h">Réponse sous 48h</p>
                     </a>
 
-                    <a href="mailto:juko.dev@gmail.com?subject=Bug%20JUKO" class="contact-card">
-                        <div class="contact-icon">🐛</div>
-                        <h3>SIGNALER UN BUG</h3>
-                        <p class="contact-value">Décris-nous le problème</p>
-                        <p class="contact-hint">On corrige vite</p>
+                    <a href="mailto:juko.party@gmail.com?subject=Bug%20JUKO" class="feature-card card-pink reveal">
+                        <div class="feature-number">02</div>
+                        <h3 data-i18n="ct.c2.t">SIGNALER UN BUG</h3>
+                        <p data-i18n="ct.c2.v">Décris-nous le problème.</p>
+                        <p class="contact-hint" data-i18n="ct.c2.h">On corrige vite</p>
                     </a>
 
-                    <a href="mailto:juko.dev@gmail.com?subject=Idée%20JUKO" class="contact-card">
-                        <div class="contact-icon">💡</div>
-                        <h3>SUGGÉRER UN JEU</h3>
-                        <p class="contact-value">Tu as une idée délirante ?</p>
-                        <p class="contact-hint">On adore les pitchs</p>
+                    <a href="mailto:juko.party@gmail.com?subject=Id%C3%A9e%20JUKO" class="feature-card card-teal reveal">
+                        <div class="feature-number">03</div>
+                        <h3 data-i18n="ct.c3.t">SUGGÉRER UN JEU</h3>
+                        <p data-i18n="ct.c3.v">Tu as une idée délirante ?</p>
+                        <p class="contact-hint" data-i18n="ct.c3.h">On adore les pitchs</p>
                     </a>
                 </section>
 
-                <!-- FAQ -->
-                <section class="pitch-block faq-block">
-                    <h2 class="block-title">Questions fréquentes</h2>
+                <!-- FAQ (style legal-sections) -->
+                <section class="pitch-block reveal">
+                    <span class="block-label" data-i18n="ct.faq.label">FAQ</span>
+                    <h2 class="block-title" data-i18n="ct.faq.title">Questions fréquentes</h2>
 
-                    <div class="faq-item">
-                        <h3>Combien de joueurs peuvent participer ?</h3>
-                        <p>JUKO se joue de 2 à 8 joueurs simultanément, en local ou à distance.</p>
-                    </div>
+                    <div class="legal-sections">
+                        <article class="legal-section reveal">
+                            <h2><span class="num">01</span><span data-i18n="ct.q1">Combien de joueurs peuvent participer ?</span></h2>
+                            <p data-i18n="ct.a1">JUKO se joue de 2 à 8 joueurs simultanément, en local ou à distance.</p>
+                        </article>
 
-                    <div class="faq-item">
-                        <h3>Faut-il être tous au même endroit ?</h3>
-                        <p>Non. Tu peux jouer à côté de tes potes (en scannant un QR Code), ou à distance avec un code de salon.</p>
-                    </div>
+                        <article class="legal-section reveal">
+                            <h2><span class="num">02</span><span data-i18n="ct.q2">Faut-il être tous au même endroit ?</span></h2>
+                            <p data-i18n="ct.a2">Non. Tu peux jouer à côté de tes potes (en scannant un QR Code), ou à distance avec un code de salon.</p>
+                        </article>
 
-                    <div class="faq-item">
-                        <h3>JUKO est-il gratuit ?</h3>
-                        <p>Oui, JUKO est entièrement gratuit, sans pub intrusive.</p>
-                    </div>
+                        <article class="legal-section reveal">
+                            <h2><span class="num">03</span><span data-i18n="ct.q3">JUKO est-il gratuit ?</span></h2>
+                            <p data-i18n="ct.a3">Oui, JUKO est entièrement gratuit, sans pub intrusive.</p>
+                        </article>
 
-                    <div class="faq-item">
-                        <h3>Mes données sont-elles en sécurité ?</h3>
-                        <p>Oui. Nous collectons le minimum nécessaire, aucune donnée n'est revendue. Consulte notre <a href="privacy.html" class="inline-link">Politique de confidentialité</a> pour les détails.</p>
-                    </div>
+                        <article class="legal-section reveal">
+                            <h2><span class="num">04</span><span data-i18n="ct.q4">Mes données sont-elles en sécurité ?</span></h2>
+                            <p data-i18n="ct.a4">Oui. Nous collectons le minimum nécessaire, aucune donnée n'est revendue.</p>
+                        </article>
 
-                    <div class="faq-item">
-                        <h3>Comment supprimer mon compte ?</h3>
-                        <p>Envoie un e-mail à juko.dev@gmail.com avec ton pseudo. Nous supprimons ton compte sous 30 jours maximum.</p>
-                    </div>
+                        <article class="legal-section reveal">
+                            <h2><span class="num">05</span><span data-i18n="ct.q5">Comment supprimer mon compte ?</span></h2>
+                            <p data-i18n="ct.a5">Envoie un e-mail à juko.party@gmail.com avec ton pseudo. Suppression sous 30 jours.</p>
+                        </article>
 
-                    <div class="faq-item">
-                        <h3>Sur quelles plateformes est JUKO disponible ?</h3>
-                        <p>iOS (iPhone &amp; iPad) et Android. Téléchargeable gratuitement sur l'App Store et Google Play.</p>
+                        <article class="legal-section reveal">
+                            <h2><span class="num">06</span><span data-i18n="ct.q6">Sur quelles plateformes est JUKO ?</span></h2>
+                            <p data-i18n="ct.a6">iOS (iPhone et iPad) et Android. Gratuit sur l'App Store et Google Play.</p>
+                        </article>
                     </div>
                 </section>
 
-                <!-- Final CTA -->
-                <section class="final-cta">
-                    <h2 class="cta-title">Pas trouvé ta réponse ?</h2>
-                    <p class="cta-sub">Écris-nous directement, on te répond rapidement.</p>
-                    <a href="mailto:juko.dev@gmail.com" class="cta-button">Nous contacter</a>
+                <!-- FINAL CTA -->
+                <section class="final-cta reveal">
+                    <h2 class="cta-title" data-i18n="ct.cta.t">Pas trouvé ta réponse ?</h2>
+                    <p class="cta-sub" data-i18n="ct.cta.s">Écris-nous directement, on te répond rapidement.</p>
+                    <a href="mailto:juko.party@gmail.com" class="cta-button" data-i18n="ct.cta.b">Nous contacter</a>
                 </section>
             </main>
 
-            <!-- Footer -->
+            <!-- FOOTER -->
             <footer class="site-footer">
-                <div class="footer-links">
-                    <a href="index.html">Accueil</a>
-                    <a href="cgu.html">CGU</a>
-                    <a href="privacy.html">Politique de confidentialité</a>
-                    <a href="contact.html">Contact</a>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="l-j">J</span><span class="l-u">U</span><span class="l-k">K</span><span class="l-o">O</span>
+                        </div>
+                        <p class="footer-tag" data-i18n="footer.tag">Moins de règles, plus de rires.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.col.app">App</h4>
+                        <a href="index.html#download" data-i18n="footer.app.download">Télécharger</a>
+                        <a href="contact.html" data-i18n="footer.app.support">Support</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.col.legal">Légal</h4>
+                        <a href="cgu.html" data-i18n="footer.legal.cgu">CGU</a>
+                        <a href="privacy.html" data-i18n="footer.legal.privacy">Confidentialité</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.col.studio">Studio</h4>
+                        <a href="mailto:juko.party@gmail.com" data-i18n="footer.studio.contact">Contact</a>
+                    </div>
                 </div>
-                <p>© 2026 JUKO STUDIO. TOUS DROITS RÉSERVÉS.</p>
-                <p class="slogan-footer">MOINS DE RÈGLES, PLUS DE RIRES.</p>
+                <div class="footer-bottom">
+                    <p data-i18n="footer.copyright">© 2026 JUKO STUDIO · Tous droits réservés.</p>
+                </div>
             </footer>
         </div>
 
-        <!-- Script -->
         <script src="script.js"></script>
     </body>
 </html>

@@ -1,160 +1,222 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <!-- Meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JUKO | Le Party Game entre potes</title>
-        <meta name="description" content="JUKO, le party game ultime pour animer tes soirées entre potes. Mini-jeux fun, multijoueur en local ou à distance. Disponible sur iOS et Android.">
-        <meta name="theme-color" content="#12121A">
+        <title>JUKO — Moins de règles, plus de rires</title>
+        <meta name="description" content="Le party game qui sauve tes soirées. 2 à 8 potes, sur place ou à distance, dizaines de mini-jeux. Gratuit sur iOS et Android.">
+        <meta name="theme-color" content="#FAFAFC">
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="JUKO — Le Party Game entre potes">
-        <meta property="og:description" content="Réunis 2 à 8 potes, choisis ton mini-jeu, explose les barres de rire.">
+        <meta property="og:title" content="JUKO — Moins de règles, plus de rires">
+        <meta property="og:description" content="Le party game qui sauve tes soirées. 2 à 8 potes, dizaines de mini-jeux.">
         <meta property="og:image" content="favicon.png">
         <meta property="og:type" content="website">
 
-        <!-- CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="favicon.png">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <!-- Progress Bar -->
         <div id="progress-bar"></div>
-
-        <!-- Particles -->
         <div class="particles-container" id="particles-bg"></div>
 
-        <!-- Top Nav -->
-        <nav class="top-nav">
-            <a href="index.html" class="nav-logo">JUKO</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Accueil</a>
-                <a href="cgu.html">CGU</a>
-                <a href="privacy.html">Confidentialité</a>
-                <a href="contact.html">Contact</a>
+        <!-- FLOATING NAV -->
+        <nav class="floating-nav" id="topNav">
+            <div class="nav-pill">
+                <a href="index.html" class="nav-logo">JUKO</a>
+                <div class="nav-divider"></div>
+                <div class="nav-menu">
+                    <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+                    <a href="cgu.html" data-i18n="nav.cgu">CGU</a>
+                    <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
+                    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-tools">
+                    <button type="button" class="nav-btn theme-toggle" aria-label="Thème">
+                        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+                    </button>
+                    <button type="button" class="nav-btn lang-btn lang-toggle" aria-label="Langue">
+                        <span>FR</span>
+                    </button>
+                </div>
             </div>
+            <button type="button" class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
 
-        <!-- Main Wrapper -->
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+            <a href="cgu.html" data-i18n="nav.cgu">CGU</a>
+            <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <div class="mm-divider"></div>
+            <div class="mm-tools">
+                <button type="button" class="nav-btn theme-toggle" aria-label="Thème">
+                    <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+                </button>
+                <button type="button" class="nav-btn lang-btn lang-toggle" aria-label="Langue">
+                    <span>FR</span>
+                </button>
+            </div>
+        </div>
+
         <div class="main-wrapper">
-            <!-- Hero Logo -->
-            <header class="hero-logo">
-                <div class="logo-row">
-                    <span class="l-j">J</span>
-                    <span class="l-u">U</span>
-                    <span class="l-k">K</span>
-                    <span class="l-o">O</span>
+            <!-- HERO -->
+            <header class="hero hero-full">
+                <div class="hero-logo">
+                    <div class="logo-row">
+                        <span class="l-j">J</span>
+                        <span class="l-u">U</span>
+                        <span class="l-k">K</span>
+                        <span class="l-o">O</span>
+                    </div>
+                    <p class="party-game-tag">PARTY GAME</p>
                 </div>
-                <p class="party-game-tag">PARTY GAME</p>
+
+                <div class="hero-text reveal">
+                    <h1 class="hero-headline">
+                        <span data-i18n="hero.headline.l1">Moins de règles,</span><br>
+                        <span class="gradient-text" data-i18n="hero.headline.l2">plus de rires.</span>
+                    </h1>
+                    <p class="hero-sub" data-i18n="hero.sub">
+                        Le party game qui sauve tes soirées. 2 à 8 potes, sur place ou à distance, dizaines de mini-jeux.
+                    </p>
+
+                    <div class="store-buttons hero-stores">
+                        <a href="#" class="store-btn" aria-label="App Store">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                        </a>
+                        <a href="#" class="store-btn" aria-label="Google Play">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                        </a>
+                    </div>
+
+                    <p class="hero-meta" data-i18n="hero.meta">100% gratuit · Sans pub · Sans inscription</p>
+                </div>
+
+                <div class="scroll-hint" aria-hidden="true"><span></span></div>
             </header>
 
-            <!-- Hero Tagline -->
-            <section class="hero-tagline">
-                <div class="version-tag">VERSION 1.0 • 2026</div>
-                <h1 class="hero-headline">
-                    Le party game<br>
-                    <span class="gradient-text">entre potes</span>
-                </h1>
-                <p class="hero-sub">
-                    Réunis 2 à 8 amis en local ou à distance, choisis un mini-jeu et explose les barres de rire.
-                </p>
-
-                <!-- Hero CTA Store Buttons -->
-                <div class="store-buttons hero-stores">
-                    <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
-                    </a>
-                    <a href="#" class="store-btn" aria-label="Disponible sur Google Play">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
-                    </a>
-                </div>
-            </section>
-
-            <!-- Content Center -->
             <main class="content-center">
-                <!-- 3 Feature Cards -->
+                <!-- 3 FEATURE CARDS -->
                 <section class="features-grid">
-                    <article class="feature-card card-purple">
+                    <article class="feature-card card-purple reveal">
                         <div class="feature-number">01</div>
-                        <div class="feature-icon">🎯</div>
-                        <h3>CRÉE TON SALON</h3>
-                        <p>Lance une partie en 3 secondes. Tes amis te rejoignent en scannant un QR Code sur place, ou en tapant ton code de salon à distance.</p>
+                        <h3 data-i18n="card1.title">SCANNE LE QR</h3>
+                        <p data-i18n="card1.text">Le premier joueur ouvre un salon. Les autres scannent ou tapent un code à 4 lettres. C'est tout, vraiment.</p>
                     </article>
-
-                    <article class="feature-card card-pink">
+                    <article class="feature-card card-pink reveal">
                         <div class="feature-number">02</div>
-                        <div class="feature-icon">🎲</div>
-                        <h3>CHOISIS TON MINI-JEU</h3>
-                        <p>Une collection de mini-jeux fun, créatifs, parfois absurdes. Chaque partie est différente, tu ne sais jamais sur quoi tu vas tomber.</p>
+                        <h3 data-i18n="card2.title">CHOISIS LE CHAOS</h3>
+                        <p data-i18n="card2.text">Une dizaine de mini-jeux : dessin, quiz absurdes, voix, défis. Tu ne sais jamais sur quoi tu vas tomber.</p>
                     </article>
-
-                    <article class="feature-card card-teal">
+                    <article class="feature-card card-teal reveal">
                         <div class="feature-number">03</div>
-                        <div class="feature-icon">🚀</div>
-                        <h3>JOUE EN 30 SECONDES</h3>
-                        <p>Pas de tuto interminable. Parties rapides de 5 à 20 min, interface ultra simple. Ton apéro est sauvé.</p>
+                        <h3 data-i18n="card3.title">LAISSE PARLER LES POTES</h3>
+                        <p data-i18n="card3.text">Le téléphone disparaît. Tout se passe entre vous. JUKO sert juste de prétexte pour rire à en pleurer.</p>
                     </article>
                 </section>
 
-                <!-- Pitch Section -->
-                <section class="pitch-block">
-                    <h2 class="block-title">Pourquoi JUKO ?</h2>
-                    <ul class="pitch-list">
-                        <li><span class="bullet">→</span> Pas besoin de matériel, juste vos téléphones</li>
-                        <li><span class="bullet">→</span> 2 à 8 joueurs, local (Wi-Fi) ou à distance</li>
-                        <li><span class="bullet">→</span> Nouveaux mini-jeux ajoutés régulièrement</li>
-                        <li><span class="bullet">→</span> Gratuit, sans pub intrusive</li>
-                        <li><span class="bullet">→</span> Interface qui claque, design ultra fun</li>
-                    </ul>
-                </section>
-
-                <!-- Use Cases -->
-                <section class="pitch-block">
-                    <h2 class="block-title">Pour quoi ?</h2>
-                    <div class="usecases-grid">
-                        <span class="usecase-chip">Apéros entre amis</span>
-                        <span class="usecase-chip">Soirées étudiantes</span>
-                        <span class="usecase-chip">Vacances à plusieurs</span>
-                        <span class="usecase-chip">Pauses au taf</span>
-                        <span class="usecase-chip">Retours de soirée</span>
-                        <span class="usecase-chip">Diners de famille</span>
+                <!-- STATS -->
+                <section class="stats-block reveal">
+                    <div class="stat">
+                        <span class="stat-value">2-8</span>
+                        <span class="stat-label" data-i18n="stats.players">joueurs</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-value">5-20</span>
+                        <span class="stat-label" data-i18n="stats.duration">min / partie</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-value">0€</span>
+                        <span class="stat-label" data-i18n="stats.price">à vie</span>
                     </div>
                 </section>
 
-                <!-- Final CTA -->
-                <section class="final-cta">
-                    <h2 class="cta-title">Prêt à animer ta prochaine soirée ?</h2>
-                    <p class="cta-sub">Télécharge JUKO maintenant, c'est gratuit.</p>
+                <!-- WHY -->
+                <section class="pitch-block reveal">
+                    <span class="block-label" data-i18n="why.label">POURQUOI JUKO</span>
+                    <h2 class="block-title" data-i18n="why.title">Tout ce que les autres apps font de travers.</h2>
+                    <ul class="pitch-list">
+                        <li><span class="bullet">→</span><span data-i18n="why.i1">Pas de tuto interminable. Tu joues en 30 secondes.</span></li>
+                        <li><span class="bullet">→</span><span data-i18n="why.i2">Sur place (QR) ou à distance (code). Les deux marchent.</span></li>
+                        <li><span class="bullet">→</span><span data-i18n="why.i3">Pas de compte à créer. Un pseudo, c'est suffisant.</span></li>
+                        <li><span class="bullet">→</span><span data-i18n="why.i4">Aucune pub, aucun paywall. Jamais.</span></li>
+                    </ul>
+                </section>
+
+                <!-- USE CASES -->
+                <section class="pitch-block reveal">
+                    <span class="block-label" data-i18n="uc.label">PARFAIT POUR</span>
+                    <h2 class="block-title" data-i18n="uc.title">Quand tu sors JUKO ?</h2>
+                    <div class="usecases-grid">
+                        <span class="usecase-chip" data-i18n="uc.c1">Apéro entre potes</span>
+                        <span class="usecase-chip" data-i18n="uc.c2">Soirée étudiante</span>
+                        <span class="usecase-chip" data-i18n="uc.c3">Vacances</span>
+                        <span class="usecase-chip" data-i18n="uc.c4">Pause au taf</span>
+                        <span class="usecase-chip" data-i18n="uc.c5">Retour de soirée</span>
+                        <span class="usecase-chip" data-i18n="uc.c6">Diner de famille</span>
+                        <span class="usecase-chip" data-i18n="uc.c7">Anniversaire</span>
+                        <span class="usecase-chip" data-i18n="uc.c8">Soirée pyjama</span>
+                    </div>
+                </section>
+
+                <!-- FINAL CTA -->
+                <section class="final-cta reveal" id="download">
+                    <h2 class="cta-title" data-i18n="cta.title">On lance la soirée ?</h2>
+                    <p class="cta-sub" data-i18n="cta.sub">Télécharge JUKO. Gratuit, sans pub, sans pièges.</p>
                     <div class="store-buttons">
-                        <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                        <a href="#" class="store-btn" aria-label="App Store">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" loading="lazy">
                         </a>
-                        <a href="#" class="store-btn" aria-label="Disponible sur Google Play">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                        <a href="#" class="store-btn" aria-label="Google Play">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" loading="lazy">
                         </a>
                     </div>
                 </section>
             </main>
 
-            <!-- Footer -->
+            <!-- FOOTER -->
             <footer class="site-footer">
-                <div class="footer-links">
-                    <a href="index.html">Accueil</a>
-                    <a href="cgu.html">CGU</a>
-                    <a href="privacy.html">Politique de confidentialité</a>
-                    <a href="contact.html">Contact</a>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="l-j">J</span><span class="l-u">U</span><span class="l-k">K</span><span class="l-o">O</span>
+                        </div>
+                        <p class="footer-tag" data-i18n="footer.tag">Moins de règles, plus de rires.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.col.app">App</h4>
+                        <a href="#download" data-i18n="footer.app.download">Télécharger</a>
+                        <a href="contact.html" data-i18n="footer.app.support">Support</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.col.legal">Légal</h4>
+                        <a href="cgu.html" data-i18n="footer.legal.cgu">CGU</a>
+                        <a href="privacy.html" data-i18n="footer.legal.privacy">Confidentialité</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.col.studio">Studio</h4>
+                        <a href="mailto:juko.party@gmail.com" data-i18n="footer.studio.contact">Contact</a>
+                    </div>
                 </div>
-                <p>© 2026 JUKO STUDIO. TOUS DROITS RÉSERVÉS.</p>
-                <p class="slogan-footer">MOINS DE RÈGLES, PLUS DE RIRES.</p>
+                <div class="footer-bottom">
+                    <p data-i18n="footer.copyright">© 2026 JUKO STUDIO · Tous droits réservés.</p>
+                </div>
             </footer>
         </div>
 
-        <!-- Script -->
         <script src="script.js"></script>
     </body>
 </html>
