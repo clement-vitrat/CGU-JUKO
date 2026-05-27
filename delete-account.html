@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JUKO | Supprimer mon compte</title>
+        <meta name="description" content="Comment supprimer son compte JUKO et effacer ses données personnelles.">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+
+    <body>
+        <div id="progress-bar"></div>
+        <div class="particles-container" id="particles-bg"></div>
+
+        <!-- FLOATING NAV -->
+        <nav class="floating-nav" id="topNav">
+            <div class="nav-pill">
+                <a href="index.html" class="nav-logo">JUKO</a>
+                <div class="nav-divider"></div>
+                <div class="nav-menu">
+                    <a href="index.html" data-i18n="nav.home">Accueil</a>
+                    <a href="cgu.html" data-i18n="nav.cgu">CGU</a>
+                    <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
+                    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-tools">
+                    <button type="button" class="nav-btn theme-toggle" aria-label="Thème">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button type="button" class="nav-btn lang-btn lang-toggle" aria-label="Langue">
+                        <span>FR</span>
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Accueil</a>
+            <a href="cgu.html">CGU</a>
+            <a href="privacy.html">Confidentialité</a>
+            <a href="contact.html">Contact</a>
+            <div class="mm-divider"></div>
+            <div class="mm-tools">
+                <button type="button" class="nav-btn theme-toggle" aria-label="Thème">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button type="button" class="nav-btn lang-btn lang-toggle" aria-label="Langue">
+                    <span>FR</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-wrapper">
+            <!-- HERO -->
+            <header class="hero hero-full">
+                <div class="hero-logo">
+                    <div class="logo-row">
+                        <span class="l-j">J</span>
+                        <span class="l-u">U</span>
+                        <span class="l-k">K</span>
+                        <span class="l-o">O</span>
+                    </div>
+                    <p class="party-game-tag">PARTY GAME</p>
+                </div>
+
+                <div class="page-hero reveal">
+                    <span class="page-hero-tag">SUPPRESSION DE COMPTE</span>
+                    <h1>Supprimer<br><span class="gradient-text">mon compte JUKO.</span></h1>
+                    <p class="page-hero-sub">
+                        Tu peux supprimer ton compte JUKO et toutes tes données personnelles à tout moment. Deux options, choisis celle qui te convient.
+                    </p>
+                </div>
+            </header>
+
+            <main class="content-center">
+                <!-- 2 OPTIONS -->
+                <section class="features-grid">
+                    <article class="feature-card card-purple reveal">
+                        <div class="feature-number">OPTION 01</div>
+                        <h3>DEPUIS L'APP</h3>
+                        <p><strong>Le plus rapide.</strong></p>
+                        <p style="margin-top: 14px;">1. Ouvre JUKO sur ton téléphone</p>
+                        <p>2. Va dans <strong>Réglages</strong> (icône en haut à droite)</p>
+                        <p>3. Appuie sur <strong>"Supprimer mon compte"</strong></p>
+                        <p>4. Confirme la suppression</p>
+                        <p style="margin-top: 14px; color: rgba(255,255,255,0.5); font-size: 13px;">Effet immédiat. Tes données sont effacées sous 30 jours.</p>
+                    </article>
+
+                    <article class="feature-card card-pink reveal">
+                        <div class="feature-number">OPTION 02</div>
+                        <h3>PAR E-MAIL</h3>
+                        <p><strong>Si tu n'as plus accès à l'app.</strong></p>
+                        <p style="margin-top: 14px;">Envoie un e-mail à :</p>
+                        <p><a href="mailto:juko.party@gmail.com?subject=Demande%20de%20suppression%20de%20compte" class="inline-link">juko.party@gmail.com</a></p>
+                        <p style="margin-top: 14px;">Avec en objet : <strong>"Demande de suppression de compte"</strong></p>
+                        <p>Et précise ton <strong>pseudo JUKO</strong> ou ton <strong>e-mail Google</strong> de connexion.</p>
+                        <p style="margin-top: 14px; color: rgba(255,255,255,0.5); font-size: 13px;">Suppression confirmée sous 30 jours maximum.</p>
+                    </article>
+                </section>
+
+                <!-- WHAT IS DELETED -->
+                <section class="pitch-block reveal">
+                    <span class="block-label">CE QUI EST SUPPRIMÉ</span>
+                    <h2 class="block-title">Toutes tes données, sans exception.</h2>
+                    <ul class="pitch-list">
+                        <li><span class="bullet">→</span><span>Ton compte JUKO et ton profil (pseudo, avatar)</span></li>
+                        <li><span class="bullet">→</span><span>Tes informations Google (ID, e-mail, nom)</span></li>
+                        <li><span class="bullet">→</span><span>Ton historique de parties et tes statistiques</span></li>
+                        <li><span class="bullet">→</span><span>Le contenu que tu as créé (dessins, textes des mini-jeux)</span></li>
+                        <li><span class="bullet">→</span><span>Tes préférences et paramètres locaux sur l'appareil</span></li>
+                        <li><span class="bullet">→</span><span>Les logs techniques et les tokens de notification push</span></li>
+                    </ul>
+                </section>
+
+                <!-- WHAT IS KEPT -->
+                <section class="pitch-block reveal">
+                    <span class="block-label">CE QUI EST CONSERVÉ</span>
+                    <h2 class="block-title">Le strict nécessaire, anonymisé.</h2>
+                    <ul class="pitch-list">
+                        <li><span class="bullet">→</span><span><strong>Données anonymisées</strong> de plantages et de performance (sans aucun lien avec ton identité), pour améliorer la stabilité du jeu</span></li>
+                        <li><span class="bullet">→</span><span><strong>Obligations légales</strong> : certaines données peuvent être conservées plus longtemps si la loi française nous l'impose (preuves comptables, demandes judiciaires) — durée maximale de 5 ans</span></li>
+                    </ul>
+                </section>
+
+                <!-- TIMELINE -->
+                <section class="pitch-block reveal">
+                    <span class="block-label">DÉLAIS</span>
+                    <h2 class="block-title">30 jours maximum.</h2>
+                    <ul class="pitch-list">
+                        <li><span class="bullet">→</span><span><strong>Suppression immédiate</strong> de ton compte et de ton profil dans l'app</span></li>
+                        <li><span class="bullet">→</span><span><strong>Sous 7 jours</strong> : effacement des serveurs de production</span></li>
+                        <li><span class="bullet">→</span><span><strong>Sous 30 jours</strong> : effacement complet des sauvegardes</span></li>
+                        <li><span class="bullet">→</span><span><strong>Confirmation par e-mail</strong> une fois la suppression terminée</span></li>
+                    </ul>
+                </section>
+
+                <!-- CONTACT -->
+                <section class="final-cta reveal">
+                    <h2 class="cta-title">Une question sur tes données ?</h2>
+                    <p class="cta-sub">Écris-nous, on te répond rapidement.</p>
+                    <a href="mailto:juko.party@gmail.com" class="cta-button">Nous contacter</a>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="site-footer">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="l-j">J</span><span class="l-u">U</span><span class="l-k">K</span><span class="l-o">O</span>
+                        </div>
+                        <p class="footer-tag">Moins de règles, plus de rires.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>App</h4>
+                        <a href="index.html#download">Télécharger</a>
+                        <a href="contact.html">Support</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Légal</h4>
+                        <a href="cgu.html">CGU</a>
+                        <a href="privacy.html">Confidentialité</a>
+                        <a href="delete-account.html">Suppression compte</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Studio</h4>
+                        <a href="mailto:juko.party@gmail.com">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 JUKO STUDIO · Tous droits réservés.</p>
+                </div>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
